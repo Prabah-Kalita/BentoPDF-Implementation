@@ -6,11 +6,18 @@ services:
     # Docker Hub (Alternative)
     # Self-Hosted build - bentopdfteam/bentopdf-simple:latest
     # Commercial build  - bentopdfteam/bentopdf:latest
-    image: ghcr.io/alam00000/bentopdf-simple:latest
+    build:
+      context: .
+      args:
+        SIMPLE_MODE: "true"
+        VITE_BRAND_NAME: "OIL Love PDF"
+        VITE_BRAND_LOGO: "images/new-logo.png"
+        VITE_FOOTER_TEXT: "Powered BentoPDF. Internal use only. Source Code: github.com/Prabah-Kalita/BentoPDF-Implementation"
+    image: bentopdf-simple:latest
     container_name: bentopdf
     restart: unless-stopped
     ports:
-      - '8080:8080'
+      - '127.0.0.1:1795:8080'
     # For IPv4-only environments
     #environment:
     #  - DISABLE_IPV6=true
