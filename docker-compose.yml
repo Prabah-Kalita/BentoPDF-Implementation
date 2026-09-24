@@ -12,7 +12,7 @@ services:
         SIMPLE_MODE: "true"
         VITE_BRAND_NAME: "OIL PDF Tools"
         VITE_BRAND_LOGO: "images/new-logo.png"
-        VITE_FOOTER_TEXT: "Powered BentoPDF. Internal use only. Source Code: github.com/Prabah-Kalita/BentoPDF-Implementationy"
+        VITE_FOOTER_TEXT: "Powered BentoPDF. Internal use only. Source Code: github.com/Prabah-Kalita/BentoPDF-Implementation"
     image: bentopdf-simple:latest
     container_name: bentopdf
     restart: unless-stopped
